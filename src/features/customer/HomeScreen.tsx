@@ -271,8 +271,8 @@ export function HomeScreen() {
         <View style={[styles.headerInner, { width: frame }]}>
           <BrandLogo width={contentWidth < 320 ? 108 : 124} />
           <View style={styles.headerActions}>
-            <IconButton
-              icon="notifications-outline"
+          <IconButton
+            icon="notifications-outline"
               label={account.enabled && unread > 0 ? `Notifications, ${unread} unread` : 'Notifications'}
               onPress={() => router.push('/notifications')}
               badge={account.enabled && unread > 0}
@@ -289,7 +289,7 @@ export function HomeScreen() {
                 initials={signedIn ? expertInitials(name) : null}
               />
             </Pressable>
-          </View>
+      </View>
         </View>
       </View>
 
@@ -349,7 +349,7 @@ export function HomeScreen() {
                         />
                       )}
                     </HomeSection>
-                  ) : null}
+      ) : null}
 
                   <HomeSection title="Popular Tools" onSeeAll={() => router.push('/(tabs)/tools')}>
                     {tools.isPending ? (
@@ -410,7 +410,7 @@ export function HomeScreen() {
                         </Rail>
                       )}
                     </HomeSection>
-                  ) : null}
+      ) : null}
                 </>
               ) : (
                 <HomeNotice text="Connect the app to the YuktiOne server to load tools, experts and programmes." />
@@ -421,7 +421,7 @@ export function HomeScreen() {
       </ScrollView>
 
       <BottomNav preset="discover" active="home" />
-    </View>
+      </View>
   );
 }
 
